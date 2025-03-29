@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manicure Kira</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+        <!-- Banner -->
+    <section id="banner">
+     <div class="banner-content">
+        <p>Ваши ногти — наше искусство!</p>
+
+        <!-- Botões abaixo da frase -->
+        <div class="banner-buttons">
+            <a href="#about" class="btn">
+                <i class="fas fa-user"></i> Обо мне <i class="fas fa-arrow-right"></i>
+            </a>
+            <a href="#services" class="btn">
+                <i class="fas fa-paint-brush"></i> Услуги <i class="fas fa-arrow-right"></i>
+            </a>
+            <a href="#gallery" class="btn">
+                <i class="fas fa-images"></i> Галерея <i class="fas fa-arrow-right"></i>
+            </a>
+            <a href="#contact" class="btn">
+                <i class="fas fa-phone"></i> Контакты <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+    
+
+    <!-- Menu de navegação -->
+    <header >
+        
+        <nav>
+            
+        </nav>
+    </header>
+
+    <!-- Seção Sobre Mim -->
+<section id="about">
+    <h2><i class="fas fa-user"></i> Обо мне</h2>
+    <div class="about-container">
+        <!-- Foto da Kira -->
+        <div class="about-image">
+            <img src="Kira.jpg" alt="Кира - мастер маникюра">
+        </div>
+
+        <!-- Texto Sobre Ela -->
+        <div class="about-text">
+            <h3>Привет! Я Кира 💅</h3>
+            <p>Я профессиональный мастер маникюра с многолетним опытом работы. Для меня важно не только делать красивые ногти, но и создавать уютную атмосферу для моих клиентов.</p>
+
+            <div class="about-details">
+                <div class="detail-item">
+                    <i class="fas fa-star"></i> <span>Многолетний опыт</span>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-paint-brush"></i> <span>Индивидуальный дизайн</span>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-heart"></i> <span>Качественные материалы</span>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-smile"></i> <span>Дружеская атмосфера</span>
+                </div>
+            </div>
+
+            <a href="#contact" class="btn">
+                <i class="fas fa-phone"></i> Связаться со мной <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<!-- Seção de Serviços -->
+<section id="services">
+    <h2><i class="fas fa-hand-sparkles"></i> Мои Услуги</h2>
+
+    <div class="services-container">
+        <div class="service-card">
+            <i class="fas fa-hand-paper"></i>
+            <h3>Классический маникюр</h3>
+            <p>Очищение, обработка и увлажнение ногтей и кутикулы.</p>
+        </div>
+
+        <div class="service-card">
+            <i class="fas fa-paint-brush"></i>
+            <h3>Гель-лак</h3>
+            <p>Долговечное и стильное покрытие с широкой палитрой цветов.</p>
+        </div>
+
+        <div class="service-card">
+            <i class="fas fa-hand-holding-water"></i>
+            <h3>Наращивание ногтей</h3>
+            <p>Создание идеальной длины и формы с использованием акрила или геля.</p>
+        </div>
+
+        <div class="service-card">
+            <i class="fas fa-sparkles"></i>
+            <h3>Дизайн ногтей</h3>
+            <p>Индивидуальный нейл-арт, стразы, градиенты и многое другое.</p>
+        </div>
+    </div>
+</section>
+
+    </section>
+
+   <!-- Modal de visualização da imagem -->
+<div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img01">
+    <div id="caption"></div>
+</div>
+
+<!-- Seção de galeria -->
+<section id="gallery">
+    <h2>Галерея</h2>
+    <div class="gallery">
+        <img src="nails1.jpg" alt="Пример работы 1" class="clickable">
+        <img src="nails2.jpg" alt="Пример работы 2"  class="clickable">
+        <img src="nails3.jpg" alt="Пример работы 3"  class="clickable">
+        <img src="nails4.jpg" alt="Пример работы 4"  class="clickable">
+        <img src="nails5.jpg" alt="Пример работы 5"  class="clickable">
+        <img src="nails6.jpg" alt="Пример работы 6"  class="clickable">
+        <img src="nails7.jpg" alt="Пример работы 7"  class="clickable">
+        <img src="nails8.jpg" alt="Пример работы 8"  class="clickable">
+        <img src="nails9.jpg" alt="Пример работы 9"  class="clickable">
+    </div>
+
+    <!-- Lightbox para visualizar as imagens em tela cheia -->
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+</section>
+
+<!-- Seção de Contato -->
+<section id="contact">
+    <h2><i class="fas fa-phone"></i> Связаться со мной</h2>
+
+    <div class="contact-container">
+        <!-- Informações de Contato -->
+        <div class="contact-info">
+            <p><i class="fas fa-map-marker-alt"></i> Город: <strong>Ростов-на-Дону, Россия</strong></p>
+            <p><i class="fas fa-phone"></i> Телефон: <a href="https://wa.me/seu_numero" target="_blank">+7 900 000-00-00 (Número fictício)</a></p>
+            <p><i class="fab fa-instagram"></i> Instagram: <a href="https://www.instagram.com/_morozova_kira_/" target="_blank">@_morozova_kira_</a></p>
+        </div>
+
+        <!-- Formulário de Contato -->
+        <form class="contact-form">
+            <label for="name">Имя:</label>
+            <input type="text" id="name" name="name" placeholder="Введите ваше имя" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="Введите ваш e-mail" required>
+
+            <label for="message">Сообщение:</label>
+            <textarea id="message" name="message" placeholder="Введите ваше сообщение" required></textarea>
+
+            <button type="submit" class="btn">
+                <i class="fas fa-paper-plane"></i> Отправить
+            </button>
+        </form>
+    </div>
+
+    <!-- Google Maps -->
+    <div class="map-container">
+        <iframe 
+            src="https://www.google.com/maps/d/u/0/embed?mid=1WzqWYACkmfAbyAVuhGvo46acpjg&ie=UTF8&hl=ru&oe=UTF8&msa=0&t=m&ll=47.236354786499795%2C39.72381599999993&spn=0.209795%2C0.475159&z=11&output=embed" 
+            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+    </div>
+</section>
+
+<section id="message">
+    <h2>Для Киры</h2>
+    <p>Кира, я решил создать этот сайт как небольшой подарок для тебя! Я надеюсь, что он поможет людям узнать больше о твоем удивительном таланте и профессионализме. Я постарался сделать его таким же стильным и красивым, как и твои работы. Надеюсь, тебе понравится!</p>
+    <p>С уважением, <strong>Gabriel 😊</strong></p>
+</section>
+
+
+
+
+            
+
+

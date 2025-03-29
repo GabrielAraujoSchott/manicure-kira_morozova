@@ -1,0 +1,618 @@
+/* Para telas maiores (exemplo: desktops) */
+@media screen and (min-width: 768px) {
+    body {
+        font-size: 18px;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+    }
+}
+
+/* Para telas menores (exemplo: celulares) */
+@media screen and (max-width: 767px) {
+    body {
+        font-size: 14px;
+    }
+
+    header {
+        display: block;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: 1fr; /* 1 coluna */
+    }
+
+    .btn {
+        width: 100%; /* Botões ocupam toda a largura em telas pequenas */
+    }
+}
+
+/* Estilo para o banner */
+#banner {
+    background-image: url('banner.jpg'); /* Caminho da imagem de fundo */
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+/* Overlay para escurecer o fundo */
+#banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Escurece o fundo */
+    z-index: 1;
+}
+
+/* Conteúdo do banner */
+.banner-content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+}
+
+/* Estilo da frase no banner */
+.banner-content p {
+    font-size: 3.5em;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: fadeInUp 1.5s ease-out;
+}
+
+/* Estilizar os botões */
+.banner-buttons {
+    margin-top: 20px;
+}
+
+.banner-buttons .btn {
+    display: inline-flex; /* Mantém os ícones alinhados ao texto */
+    align-items: center; /* Centraliza ícone e texto */
+    background-color: #f810d9; /* Cor de fundo do botão */
+    color: #fff;
+    padding: 15px 25px;
+    font-size: 1.2em;
+    text-decoration: none;
+    border-radius: 8px; /* Bordas arredondadas */
+    margin: 10px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+/* Ícones dentro dos botões */
+.btn i {
+    margin-right: 10px; /* Espaçamento entre ícone e texto */
+    font-size: 1.2em;
+}
+
+/* Setinha à direita */
+.btn i.fa-arrow-right {
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* Efeito hover (quando passa o mouse) */
+.banner-buttons .btn:hover {
+    background-color: #312d31; /* Muda a cor do botão */
+    transform: scale(1.1); /* Aumenta ligeiramente o botão */
+}
+
+/* Faz a setinha se mover para a direita ao passar o mouse */
+.banner-buttons .btn:hover i.fa-arrow-right {
+    transform: translateX(5px);
+}
+
+/* Animação de fade-in para o texto */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Estilo de links (se houver) */
+.banner-content a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+.banner-content a:hover {
+    color: #f810ed; /* Cor dourada ao passar o mouse */
+}
+
+
+
+/* Estilo da seção Sobre Mim */
+#about {
+    background-color: #ffe6f2;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* Título estilizado */
+#about h2 {
+    font-size: 2.5em;
+    color: #e91e63;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+/* Layout flexível */
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+/* Estilo da imagem de perfil */
+.about-image img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border: 5px solid #e91e63;
+    transition: transform 0.3s ease;
+}
+
+.about-image img:hover {
+    transform: scale(1.05);
+}
+
+/* Texto da seção */
+.about-text {
+    max-width: 500px;
+    text-align: left;
+}
+
+/* Nome e introdução */
+.about-text h3 {
+    font-size: 1.8em;
+    color: #e91e63;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 10px;
+}
+
+/* Texto principal */
+.about-text p {
+    font-size: 1.2em;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Detalhes em destaque */
+.about-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.detail-item {
+    background: #ff9a9e;
+    padding: 10px 15px;
+    border-radius: 10px;
+    color: white;
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Botão de contato */
+.about-text .btn {
+    display: inline-block;
+    background: #e91e63;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1.2em;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.about-text .btn:hover {
+    background: #c2185b;
+}
+
+
+/* Estilizando os links de navegação como botões */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    margin-top: 20px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a.button {
+    padding: 12px 25px;
+    background-color: #ff69b4;  /* Cor de fundo rosa */
+    color: white;
+    font-size: 1.2em;
+    text-decoration: none;
+    border-radius: 30px;  /* Bordas arredondadas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Sombra suave */
+    transition: all 0.3s ease-in-out;  /* Transição suave para efeitos */
+}
+
+/* Efeito de hover - quando o mouse passa por cima */
+nav ul li a.button:hover {
+    background-color: #ff1493;  /* Rosa mais escuro quando passar o mouse */
+    transform: translateY(-4px);  /* Levanta o botão um pouco */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);  /* Aumenta a sombra no hover */
+}
+
+/* Títulos principais */
+h1, h2 {
+    color: #ff69b4;  /* Cor rosa */
+    font-family: 'Arial', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 1px;  /* Espaçamento entre letras */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);  /* Sombra sutil nos títulos */
+}
+
+/* Subtítulos */
+h3 {
+    color: #ff1493;  /* Cor rosa mais escura */
+    font-size: 1.5em;
+    font-weight: 600;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+/* Estilo da seção de serviços */
+#services {
+    background-color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Título estilizado */
+#services h2 {
+    font-size: 2.5em;
+    color: #e91e63;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+/* Container de serviços */
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Cartão de serviço */
+.service-card {
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    border-radius: 12px;
+    padding: 25px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.3);
+}
+
+/* Ícone dentro do cartão */
+.service-card i {
+    font-size: 2.5em;
+    color: white;
+    margin-bottom: 10px;
+}
+
+/* Nome do serviço */
+.service-card h3 {
+    font-size: 1.5em;
+    color: white;
+    margin-bottom: 10px;
+}
+
+/* Descrição do serviço */
+.service-card p {
+    font-size: 1.1em;
+    color: white;
+}
+
+/* Estilo para os botões de ação */
+section a.button {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #ff69b4;  /* Cor rosa */
+    color: white;
+    font-size: 1.1em;
+    text-decoration: none;
+    border-radius: 25px;
+    margin: 10px 0;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Efeito de hover para os botões de ação */
+section a.button:hover {
+    background-color: #ff1493;  /* Rosa mais escuro */
+    transform: translateY(-3px);  /* Levanta um pouco o botão */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Aumenta a sombra */
+}
+
+/* Estilo para a galeria */
+.gallery img {
+    border: 5px solid #ff69b4;
+    border-radius: 10px;
+    margin: 10px;
+    width: 200px;
+    height: auto;
+    cursor: pointer;  /* Cursor de clique */
+}
+
+/* Lightbox (Tela cheia) */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Estilos para a modal */
+.modal {
+    display: none;  /* Escondida por padrão */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);  /* Fundo escuro */
+    background-color: rgba(0, 0, 0, 0.9);  /* Fundo transparente com escurecimento */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    height: 80%;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #ff69b4;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#caption {
+    text-align: center;
+    color: #ccc;
+    padding: 10px;
+    font-size: 20px;
+}
+
+
+/* Rodapé */
+footer {
+    background-color: #ff1493; /* Cor de fundo rosa mais forte */
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 1.2em;
+    font-family: 'Arial', sans-serif;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1.1em;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #banner {
+        height: 300px;
+    }
+
+    .banner-content h1 {
+        font-size: 2em;
+    }
+
+    .banner-content p {
+        font-size: 1.2em;
+    }
+
+    section {
+        padding: 30px 10px;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+}
+
+/* Estilo da seção de contato */
+#contact {
+    background-color: #fff;
+    padding: 50px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Título estilizado */
+#contact h2 {
+    font-size: 2.5em;
+    color: #e91e63;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Estilo das informações de contato */
+.contact-info {
+    margin-bottom: 30px;
+    font-size: 1.2em;
+}
+
+.contact-info p {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.contact-info i {
+    color: #ff4081;
+}
+
+/* Links de contato */
+.contact-info a {
+    text-decoration: none;
+    color: #ff4081;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo do formulário */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.contact-form label {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #555;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 90%;
+    max-width: 500px;
+    padding: 10px;
+    font-size: 1.1em;
+    border: 2px solid #ff4081;
+    border-radius: 5px;
+    outline: none;
+}
+
+.contact-form textarea {
+    height: 150px;
+    resize: none;
+}
+
+/* Botão do formulário */
+.contact-form .btn {
+    background-color: #ff4081;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-form .btn:hover {
+    background-color: #e91e63;
+}
+
+/* Mapa */
+.map-container {
+    margin-top: 30px;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+}
+
